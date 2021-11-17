@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            docker-compose --env-file ../.env up -d
+            docker-compose up -d
             docker-compose run dockerapp1 python test.py
       - deploy:
           name: Push application Docker image
